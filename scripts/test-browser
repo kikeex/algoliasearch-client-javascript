@@ -12,7 +12,7 @@ echo "Browser test: build"
 NODE_ENV=production npm run build
 
 echo "Browser test: integration"
-DEBUG=zuul* zuul --no-coverage -- test/run-integration.js
+DEBUG=zuul* zuul --sauce-connect --no-coverage -- test/run-integration.js
 
 echo "Browser test: unit"
-DEBUG=zuul* zuul --no-coverage -- test/run-browser.js
+DEBUG=zuul* zuul --sauce-connect --no-coverage -- test/run-browser.js

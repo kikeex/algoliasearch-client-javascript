@@ -17,7 +17,7 @@ var zuulConfig = module.exports = {
 
   // only used when run with saucelabs
   // not activated when dev or phantom
-  concurrency: 5,
+  concurrency: 1,
   // if browser does not sends output in 120s since last output:
   // stop testing, something is wrong
   browser_output_timeout: 60 * 3 * 1000,
@@ -26,12 +26,12 @@ var zuulConfig = module.exports = {
   browser_retries: 2
 };
 
-if (process.env.CI === 'true') {
-  zuulConfig.tunnel = {
-    type: 'algolia-ngrok',
-    bind_tls: true
-  };
-}
+// if (process.env.CI === 'true') {
+//   zuulConfig.tunnel = {
+//     type: 'algolia-ngrok',
+//     bind_tls: true
+//   };
+// }
 
 var browsers = {
   all: [{
