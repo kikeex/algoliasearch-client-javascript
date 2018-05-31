@@ -25,7 +25,8 @@ test('Request strategy handles JSONP syntax errors', function(t) {
         currentURL.host,
         currentURL.host
       ],
-      timeout: 5000
+      timeout: 5000,
+      protocol: currentURL.protocol
     },
     indexName: 'JSONP-syntax-error'
   });

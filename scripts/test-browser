@@ -14,9 +14,5 @@ NODE_ENV=production npm run build
 echo "Browser test: integration"
 DEBUG=zuul* zuul --no-coverage -- test/run-integration.js
 
-if [ $TRAVIS_PULL_REQUEST != 'false' ]; then
-  echo "No browser unit test for PR"
-else
-  echo "Browser test: unit"
-  DEBUG=zuul* zuul --no-coverage -- test/run-browser.js
-fi
+echo "Browser test: unit"
+DEBUG=zuul* zuul --no-coverage -- test/run-browser.js

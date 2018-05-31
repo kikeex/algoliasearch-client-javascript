@@ -21,7 +21,8 @@ test('Request strategy handles slow JSONP responses (no double callback)', funct
         currentURL.host,
         currentURL.host
       ],
-      timeout: requestTimeout
+      timeout: requestTimeout,
+      protocol: currentURL.protocol
     },
     indexName: 'slow-response'
   });

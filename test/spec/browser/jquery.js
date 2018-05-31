@@ -187,7 +187,8 @@ if (!browser.msie || parseFloat(browser.version) > 8) {
         hosts: [
           currentURL.host
         ],
-        timeout: 5000
+        timeout: 5000,
+        protocol: currentURL.protocol
       }
     );
     var index = client.initIndex('simple-JSONP-response');
